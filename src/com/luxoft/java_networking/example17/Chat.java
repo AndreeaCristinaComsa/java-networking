@@ -24,10 +24,10 @@ import javax.swing.JTextField;
 public class Chat implements ActionListener, Runnable {
 	private static final int BUFSIZE = 508;
 
-	private String user;
-	private int localPort;
-	private String remoteHost;
-	private int remotePort;
+	private String user = "Andreea";
+	private int localPort = 5003;
+	private String remoteHost = "10.2.78.29";
+	private int remotePort = 2202;
 
 	private DatagramSocket socket;
 	private DatagramPacket packetOut;
@@ -35,7 +35,7 @@ public class Chat implements ActionListener, Runnable {
 	private JTextArea output;
 
 	public Chat(String[] args, JFrame frame) throws UnknownHostException, SocketException {
-		setParameter(args);
+		//setParameter(args);
 		if (user == null || remoteHost == null || localPort == 0 || remotePort == 0)
 			throw new RuntimeException("Missing parameters");
 
